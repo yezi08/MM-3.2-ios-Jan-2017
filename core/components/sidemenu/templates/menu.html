@@ -34,6 +34,17 @@
                             <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
                         </a>
                     </li>
+                    
+// START: XJTLU ADDITION 03/Aug/2016 - add side menu "ICE News"
+					
+					<li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" class="mm-sidemenu-handler mma-frontpage-handler">
+                        <a menu-close class="item item-icon-left ng-binding" ui-sref="site.mm_course-section" title="Site home" href="#/site/mm_course-section">
+                            <i class="icon ion-home"></i>{{ 'mm.sidemenu.mycourses' | translate}}
+                        </a>
+                    </li>
+
+// END: XJTLU ADDITION 03/Aug/2016                    
+                    
                     <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
                         <ion-spinner></ion-spinner>
                     </li>
